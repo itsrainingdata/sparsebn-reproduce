@@ -10,6 +10,9 @@
 # Make sure that the package and its dependencies have been installed
 #  using the included install_local.R script
 
+### Options ----------------------------------------------------------
+options(digits = 3) # to suppress output of excessive decimal places
+
 ### Section 1 --------------------------------------------------------
 library("sparsebn")
 data("pathfinder")
@@ -90,7 +93,7 @@ estimate.dag(cyto.data,
 
 ### Section 5.4 --------------------------------------------------------
 print(cyto.learn[[1]])
-sumary(cyto.learn[[1]])
+summary(cyto.learn[[1]])
 
 print(cyto.learn[[3]])
 summary(cyto.learn[[3]])
