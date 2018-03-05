@@ -1,5 +1,17 @@
+#
+# Reproduction code for jss3051: "Learning Large-Scale Bayesian
+#  Networks with the sparsebn Package" by Aragam, Gu, and Zhou
+#
+# This script reproduces all of the examples from the journal version
+#  of the paper.
+#
+
+### Package installation ---------------------------------------------
+# Make sure that the package and its dependencies have been installed
+#  using the included install_local.R script
+
 ### Section 1 --------------------------------------------------------
-library(sparsebn)
+library("sparsebn")
 data("pathfinder")
 data <- sparsebnData(pathfinder$data, type = "continuous")
 dags <- estimate.dag(data)
@@ -190,7 +202,7 @@ cyto.param <- estimate.parameters(cyto.learn, data = cyto.data)
 cyto.param[[5]][["raf"]]
 
 ### Section 6.2 --------------------------------------------------------
-data(pathfinder)
+data("pathfinder")
 dat <- sparsebnData(pathfinder$data, type = "c")
 
 nn <- num.samples(dat)
